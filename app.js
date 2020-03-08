@@ -6,20 +6,25 @@ import bodyParser from 'body-parser';
 import userRouter from './routes/userRouter';
 import videoRouter from './routes/videoRouter';
 import globalRouter from './routes/globalRouter';
+import routes from './routes';
+import { localsMiddleware } from './middlewares/middlewares';
 
 const app = express();
 
 app.set('port', process.env.PORT || 8001);
+app.set('view engine', 'pug');
 
+app.use(helmet());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(helmet());
 app.use(logger("dev"));
 
-app.use('/', globalRouter); // join
-app.use('/user', userRouter);
-app.use('/video', videoRouter);
+app.use(localsMiddleware);
+
+app.use(routes.home, globalRouter); // join
+app.use(routes.users, userRouter);
+app.use(routes.videos, videoRouter);
 
 
 export default app;
