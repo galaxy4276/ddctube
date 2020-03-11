@@ -1,4 +1,10 @@
 extends layouts/main.pug
 
 block content
-  p upload
+  .form-container
+    form(action=routes.upload, method="post")
+      label(for="videoFile") Video File
+      input(type="file", name="videoFile")
+      input(type="text", placeholder="Title", name="title")
+      textarea(name="description", placeholder="Description")
+      input(type="submit", value="Update Video")
