@@ -1,52 +1,19 @@
-export const videos = [
-  {
-    id: 3434,
-    title: 'Video Awesome',
-    description: 'This is something I love',
-    views: 24,
-    videoFile: 'https://ia800300.us.archive.org/17/items/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
-    creator: {
-      id: 1231231,
-      name: 'Choeungi',
-      email: 'chldmsrl12@naver.com',
-    }
-  },
-  {
-    id: 213123131,
-    title: 'Video Super',
-    description: 'This is something I love',
-    views: 24,
-    videoFile: 'https://ia800300.us.archive.org/17/items/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
-    creator: {
-      id: 1231231,
-      name: 'Choeungi',
-      email: 'chldmsrl12@naver.com',
-    }
-  },
-  {
-    id: 22312,
-    title: 'Video Nice',
-    description: 'This is something I love',
-    views: 24,
-    videoFile: 'https://ia800300.us.archive.org/17/items/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
-    creator: {
-      id: 1231231,
-      name: 'Choeungi',
-      email: 'chldmsrl12@naver.com',
-    }
-  },
-  {
-    id: 34334212,
-    title: 'Video Perfect',
-    description: 'This is something I love',
-    views: 24,
-    videoFile: 'https://ia800300.us.archive.org/17/items/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
-    creator: {
-      id: 1231231,
-      name: 'Choeungi',
-      email: 'chldmsrl12@naver.com',
-    }
-  }
-]
+import mongoose from 'mongoose';
 
-// fake Data.
+mongoose.connect("mongodb://galaxy:chldmsrl12@localhost:27017/ddc-tube", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+});
+
+mongoose.connection.on('connected', () => {
+  console.log('MongoDB Connected');
+});
+
+mongoose.connection.on('disconnected', () => {
+  console.log('MongoDB DisConnected');
+});
+
+mongoose.connection.on('error', () => {
+  console.log('MONGODB ERROR');
+});
