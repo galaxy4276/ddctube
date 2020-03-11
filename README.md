@@ -11,12 +11,12 @@
 - [x] Join
 - [x] Login
 - [x] Search
-- [ ] User Detail
-- [ ] Edit Profile
+- [x] User Detail
+- [x] Edit Profile
 - [ ] Change Password
-- [ ] Upload
-- [ ] Video Detal
-- [ ] Edit Video
+- [x] Upload
+- [x] Video Detal
+- [x] Edit Video
 
 ## Learning:
 - Node.js 전반적인 기초에 대한 이해
