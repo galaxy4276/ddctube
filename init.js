@@ -1,5 +1,8 @@
 import app from './app';
 import './db';
+import './models/Video';
+import './models/Comment';
+
 
 const handleListening = () => console.log('Listenning on http://localhost:' + app.get('port'));
 

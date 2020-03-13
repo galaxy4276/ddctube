@@ -4,7 +4,7 @@
 
 - 3.07 ~ 3.10 기본 Node.JS Setting, Pug Template Engine으로 기본적인 View 와 Routing 완료
 - 3.11 Join, Search 완료
-
+- 3.12 MongoDB - Mongoose Setting 완료, Video, Comment Schema Definition.
 
 ## Pages:
 - [ ] Home

@@ -1,12 +1,15 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import Video from './models/Video';
+dotenv.config();
 
-mongoose.connect("mongodb://galaxy:chldmsrl12@localhost:27017/ddc-tube", {
+mongoose.connect(process.env.MONGO_DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
 });
 
-mongoose.connection.on('connected', () => {
+mongoose.connection.once('connected', () => {
   console.log('MongoDB Connected');
 });
 
@@ -14,6 +17,6 @@ mongoose.connection.on('disconnected', () => {
   console.log('MongoDB DisConnected');
 });
 
-mongoose.connection.on('error', () => {
-  console.log('MONGODB ERROR');
+mongoose.connection.on('error', error => {
+  console.log(`MongoDB Error : ${error}`);
 });

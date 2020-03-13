@@ -8,7 +8,6 @@ import videoRouter from './routes/videoRouter';
 import globalRouter from './routes/globalRouter';
 import routes from './routes';
 import { localsMiddleware } from './middlewares/middlewares';
-import mongoose from 'mongoose';
 
 const app = express();
 
