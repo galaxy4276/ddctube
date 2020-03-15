@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger("dev"));
-
+app.use('/uploads', express.static('uploads'));
 app.use(localsMiddleware);
 
 app.use(routes.home, globalRouter); // join

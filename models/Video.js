@@ -12,7 +12,7 @@ const VideoSchema = new mongoose.Schema({
   description: String,
   views: {
     type: Number,
-    defalut: 0,
+    default: 0,
   },
   createdAt: {
     type: Date,
