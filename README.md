@@ -5,6 +5,8 @@
 - 3.07 ~ 3.10 기본 Node.JS Setting, Pug Template Engine으로 기본적인 View 와 Routing 완료
 - 3.11 Join, Search 완료
 - 3.12 MongoDB - Mongoose Setting 완료, Video, Comment Schema Definition.
+- 휴식기
+- 3.15 Video 에 관한 모든 로직을 추가함. routes 안꼬이게 잘 생각하기. Video에 대한 CRUD 모두 구현
 
 ## Pages:
 - [ ] Home
