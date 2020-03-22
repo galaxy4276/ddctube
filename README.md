@@ -7,6 +7,8 @@
 - 3.12 MongoDB - Mongoose Setting 완료, Video, Comment Schema Definition.
 - 휴식기
 - 3.15 Video 에 관한 모든 로직을 추가함. routes 안꼬이게 잘 생각하기. Video에 대한 CRUD 모두 구현
+- 3.16 ~ 3.19 개학 후 과제에 바빴음.
+- 3.20 Webpack 추가 및 설정완료. Webpack 부분은 소스코드 전체를 이해하지 못하더라도 괜찮음
 
 ## Pages:
 - [ ] Home
