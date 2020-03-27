@@ -22,6 +22,11 @@
 - [x] Video Detal
 - [x] Edit Video
 
+
+## Attributes
+- [x] WEBPACK Settings
+
+
 ## Learning:
 - Node.js 전반적인 기초에 대한 이해
 - Pug 심화 이해

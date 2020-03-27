@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable no-console */
 /* eslint-disable no-empty */
 /* eslint-disable indent */
