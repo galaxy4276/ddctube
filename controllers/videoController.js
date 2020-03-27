@@ -114,7 +114,7 @@ export const deleteVideo = async (req, res) => {
     } = req;
 
     try {
-        await Video.findOneAndDelete(id, () => { console.log(`${id} 요소가 삭제되었습니다.`); });
+        await Video.findOneAndDelete({ _id: id }, () => { console.log(`${id} 요소가 삭제되었습니다.`); });
     } catch (err) {
         console.error(`deleteVideo 에러 발생: ${err}`);
     }

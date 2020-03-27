@@ -1,8 +1,10 @@
 header.header
   .header_wrapper
     .header_column
-      a(href=routes.home)
-        i.fab.fa-youtube
+      .header_logo
+        a(href=routes.home)
+          i.fab.fa-youtube 
+          p#titleMe DDC
     .header_column
       form(action=routes.search, method="get")
         input(type="text", name="term" placeholder="Search by term...")
