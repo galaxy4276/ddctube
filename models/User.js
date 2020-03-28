@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import passportLocalMongoose from 'passport-local-mongoose';
 
 const UserSchema = new mongoose.Schema({
     name: String,
@@ -9,6 +10,8 @@ const UserSchema = new mongoose.Schema({
     kakaoId: Number,
 });
 
-const model = mongoose.Model('User', UserSchema);
+UserSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
+
+const model = mongoose.model('User', UserSchema);
 
 export default model;
