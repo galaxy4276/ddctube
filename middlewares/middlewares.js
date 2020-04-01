@@ -5,8 +5,8 @@ import routes from '../routes';
 export const localsMiddleware = (req, res, next) => {
     res.locals.siteName = 'DDCtube';
     res.locals.routes = routes;
-    res.locals.user = req.user || null;
-    console.log(req.user);
+    console.log('req.user: ', req.user);
+    res.locals.loggedUser = req.user || null;
 
     return next();
 };

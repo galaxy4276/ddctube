@@ -4,6 +4,7 @@ const JOIN = '/join';
 const LOGIN = '/login';
 const LOGOUT = '/logout';
 const SEARCH = '/search';
+const ME = '/me';
 
 // Users
 const USERS = '/users';
@@ -23,7 +24,13 @@ const DELETE_VIDEO = '/:id/delete';
 const GITHUB = '/auth/github';
 const GITHUB_CALLBACK = '/auth/github/callback';
 
+// Facebook
+const FACEBOOK = '/auth/facebook';
+const FACEBOOK_CALLBACK = '/auth/facebook/callback';
 
+// Kakao
+const KAKAO = '/auth/kakao';
+const KAKAO_CALLBACK = '/auth/kakao/callback';
 
 const routes = {
     home: HOME,
@@ -35,7 +42,8 @@ const routes = {
     userDetail: (id) => {
         if (id) {
             return `/users/${id}`;
-        }
+        } 
+        console.log('id not found');
         return USER_DETAIL;
     },
     editProfile: EDIT_PROFILE,
@@ -59,6 +67,11 @@ const routes = {
     },
     github: GITHUB,
     githubCallback: GITHUB_CALLBACK,
+    facebook: FACEBOOK,
+    facebookCallback: FACEBOOK_CALLBACK,
+    kakao: KAKAO,
+    kakaoCallback: KAKAO_CALLBACK,
+    me: ME,
 };
 
 export default routes;

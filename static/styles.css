@@ -198,8 +198,11 @@ button,
 input[type="submit"] {
   cursor: pointer; }
 
+img {
+  border: 1px solid img black; }
+
 .header {
-  background-color: #ea232c;
+  background-color: #fe9801;
   margin-bottom: 50px; }
   .header .header_wrapper {
     padding: 5px 0px;
