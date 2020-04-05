@@ -1,10 +1,13 @@
+import '@babel/polyfill';
+import dotenv from 'dotenv';
+import './db';
 import app from './app';
 
-import './db';
 import './models/Video';
 import './models/Comment';
 import './models/User';
-// import './models/Comment';
+
+dotenv.config();
 
 
 const handleListening = () => console.log(`Listenning on http://localhost:${app.get('port')}`);

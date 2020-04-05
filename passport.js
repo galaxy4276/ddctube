@@ -20,14 +20,17 @@ passport.use(new GithubStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_ID,
     clientSecret: process.env.FACEBOOK_SECRET,
-    callbackURL: `http://localhost/8001${routes.facebookCallback}`,
+    callbackURL: `https://580ccbc4.ngrok.io${routes.facebookCallback}`, 
+    profileFields: ['id', 'displayName', 'photos', 'email'],
+    scope: ['public_profile', 'email'],
 }, facebookLoginCallback));
 
 passport.use(new KakaoStrategy({
     clientID: process.env.KAKAO_KEY,
-    callbackURL: `${routes.kakaoCallback}`,
+    callbackURL: routes.kakaoCallback,
 }, kakaoLoginCallback));
 
 passport.serializeUser(User.serializeUser()); // 쿠키에 user.id 만 담아서 보내
 passport.deserializeUser(User.deserializeUser());
-  
+
+

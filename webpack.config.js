@@ -11,34 +11,34 @@ const config = {
     entry: ['@babel/polyfill', ENTRY_FILE],
     mode: MODE,
     module: {
-      rules: [
+    rules: [
         {
-          test: /\.(js)$/,
-          use: [
+        test: /\.(js)$/,
+        use: [
             {
-              loader: 'babel-loader', 
+            loader: 'babel-loader', 
             },
-          ],
+        ],
         },
         {
-          test: /\.(scss)$/,
-          use: ExtractCSS.extract([{
+        test: /\.(scss)$/,
+        use: ExtractCSS.extract([{
             loader: 'css-loader',
-          },
-          {
+        },
+        {
             loader: 'postcss-loader',
             options: {
-              plugins () {
+            plugins () {
                 return [autoprefixer({ broswer: 'cover 99.5%' })];
-              },
             },
-          },
-          {
+            },
+        },
+        {
             loader: 'sass-loader',
-          },
+        },
         ]),
         },
-      ],
+    ],
     },
     output: {
         path: OUTPUT_DIR,

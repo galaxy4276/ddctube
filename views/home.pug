@@ -2,11 +2,11 @@ extends layouts/main.pug
 include mixins/videoBlock
 
 block content
-  .home_videos
-    each video in videos
-      +videoBlock({
-        id: video._id,
-        title: video.title,
-        views: video.views,
-        videoFile: video.fileUrl,
-      })
+    .home_videos
+        each video in videos
+            +videoBlock({
+                id: video._id,
+                title: video.title,
+                views: video.views,
+                videoFile: video.fileUrl,
+            })

@@ -10,6 +10,7 @@ import Video from '../models/Video';
 export const home = async (req, res) => {
     try {
         const videos = await Video.find({}).sort({ _id: -1 });
+        console.log('req.user: ', req.user);
         res.render('home', { pageTitle: 'Home', videos }); // try done.
     } catch (error) {
         console.error(error);
@@ -26,11 +27,11 @@ export const search = async (req, res) => {
     let videos = [];
 
     try {
-      videos = await Video.find({ 
+    videos = await Video.find({ 
         title: { $regex: searchingBy, $options: 'i' },
-      });
+    });
     } catch(err) {
-      console.log(`search 에러 발생: ${err}`);
+    console.log(`search 에러 발생: ${err}`);
     }
     res.render('search', { pageTitle: 'Search', searchingBy, videos });
 };
@@ -97,8 +98,8 @@ export const postEditVideo = async (req, res) => {
     } = req;
     try {
         await Video.findOneAndUpdate({ _id: id }, 
-          { title: UpdateTitle, description: UpdateDescription }, 
-          () => {
+        { title: UpdateTitle, description: UpdateDescription }, 
+        () => {
             console.log(`${id} 데이터가 업데이트 되었습니다.`);
         });
         res.redirect(routes.videoDetail(id));
