@@ -7,6 +7,7 @@
 import routes from '../routes';
 import Video from '../models/Video';
 
+
 export const home = async (req, res) => {
     try {
         const videos = await Video.find({}).sort({ _id: -1 });
@@ -52,8 +53,10 @@ export const postUpload = async (req, res) => {
         fileUrl: path,
         title,
         description,
+        creator: req.user.id,
     });
-    console.log(`createdVideo: ${newVideo}`);
+    req.user.videos.push(newVideo._id);
+    req.user.save();
     res.redirect(routes.videoDetail(newVideo._id));
     // To Do : Upload and save video
 };
@@ -64,9 +67,8 @@ export const videoDetail = async (req, res) => {
     const {
         params: { id },
     } = req;
-    console.log(`id: ${id}`);
     try {
-        const video = await Video.findById(id);
+        const video = await Video.findById(id).populate('creator');
         console.log(`finded Video: ${video}`);
         res.render('videoDetail', { pageTitle: `${video.title} | DDCtube`, video });
     } catch (error) {
