@@ -84,8 +84,11 @@ export const getEditVideo = async (req, res) => {
     } = req;
     try {
         const video = await Video.findById(id);
-        console.log(`video _id: ${video._id}`);
-        res.render('editVideo', { pageTitle: `Edit ${video.title}`, video });
+        if (video.creator.id !== req.user.id) {
+            throw Error();
+        } else {
+            res.render('editVideo', { pageTitle: 'Edit Video', video });
+        }
     } catch (error) {
         console.error(error);
         res.redirect(routes.home);
@@ -117,7 +120,12 @@ export const deleteVideo = async (req, res) => {
     } = req;
 
     try {
-        await Video.findOneAndDelete({ _id: id }, () => { console.log(`${id} 요소가 삭제되었습니다.`); });
+        const video = await Video.findById(id);
+        if (video.creator.id !== req.user.id) {
+            throw Error();
+        } else {
+            await Video.findOneAndDelete({ _id: id }, () => { console.log(`${id} 요소가 삭제되었습니다.`); });
+        }
     } catch (err) {
         console.error(`deleteVideo 에러 발생: ${err}`);
     }

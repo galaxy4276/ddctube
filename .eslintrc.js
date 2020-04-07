@@ -32,4 +32,7 @@ module.exports = {
     "space-before-function-paren": 0,
     "eol-last": 0
   },
+  env: {
+      'browser': true,
+  },
 };
