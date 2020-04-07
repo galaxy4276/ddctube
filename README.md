@@ -10,18 +10,22 @@
 - 3.16 ~ 3.19 개학 후 과제에 바빴음.
 - 3.20 Webpack 추가 및 설정완료. Webpack 부분은 소스코드 전체를 이해하지 못하더라도 괜찮음
 - 3.21 ~ 4.01 모든 디자인 부분추가, 유저인증 부분추가, 카카오톡, 깃헙, 페이스북 로그인 추가
+- 4.01 ~ 4.04 유저 인증 ( 페이스북, 깃헙, 카카오톡 로그인 추가 )
+- 4.05 자바스크립트 비디오 플레이어 제작 중
 
 ## Pages:
-- [ ] Home
+- [x] Home
 - [x] Join
 - [x] Login
 - [x] Search
 - [x] User Detail
 - [x] Edit Profile
-- [ ] Change Password
+- [x] Change Password
 - [x] Upload
 - [x] Video Detal
 - [x] Edit Video
+- [x] User Authentication ( passport )
+- [ ] Video made by Javascript of Functionality.
 
 
 ## Attributes

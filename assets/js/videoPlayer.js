@@ -1,7 +1,7 @@
 const videoContainer = document.getElementById('jsVideoPlayer');
 const videoPlayer = document.querySelector('#jsVideoPlayer video');
 const playBtn = document.getElementById('jsPlayButton');
-const jsVolumeBtn = document.getElementById('jsVolumnBtn')
+const jsVolumeBtn = document.getElementById('jsVolumeBtn');
 
 function handlePlayClick () {
     console.log('handlePlayClick Function Running');
@@ -17,10 +17,10 @@ function handlePlayClick () {
 function handleVolumeClick () {
     if (videoPlayer.muted) {
         videoPlayer.muted = false;
-        jsVolumeBtn.innerHTML = '<i class="fas fa-volume-up></i>';
+        jsVolumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
     } else {
         videoPlayer.muted = true;
-        jsVolumeBtn.innerHTML = '<i class="fas fa-volume-mute></i>';
+        jsVolumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
     }
 }
 
