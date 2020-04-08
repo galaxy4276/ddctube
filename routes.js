@@ -36,6 +36,7 @@ const KAKAO_CALLBACK = '/auth/kakao/callback';
 // API
 const API = '/api';
 const REGISTER_VIEW = '/:id/view';
+const ADD_COMMENT = '/:id/comment';
 
 
 const routes = {
@@ -80,6 +81,7 @@ const routes = {
     me: ME,
     api: API,
     registerView: REGISTER_VIEW,
+    addComment: ADD_COMMENT,
 };
 
 export default routes;
