@@ -148,7 +148,7 @@ export const kakaoLoginCallback = async (accessToken, refreshToken, profile, don
         });
         return done(null, newUser);
     } catch (error) {
-        console.log(`kakao login error: ${error}`);z
+        console.log(`kakao login error: ${error}`);
         return done(error);
     }
 };
@@ -158,7 +158,6 @@ export const postKakaoLogin = (req, res) => {
 };
 
 export const getMe = (req, res) => {
-    console.log(`req.user id: ${req.user.id}`);
     res.render('userDetail', { pageTitle: 'User Detail', user: req.user });
 };
 
@@ -168,7 +167,7 @@ export const userDetail = async (req, res) => {
     console.log(`param id: ${id}`);
     try {
         const user = await User.findById(id).populate('videos');
-        console.log(user);
+        console.log('user:', user);
         res.render('userDetail', { pageTitle: 'User Detail', user });
     } catch (error) {
         console.error(error);

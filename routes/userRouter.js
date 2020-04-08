@@ -3,7 +3,7 @@ import routes from '../routes';
 import {
     userDetail, getChangePassword, getEditProfile, postEditProfile, postChangePassword, 
 } from '../controllers/userController';
-import { onlyPrivate, uploadAvatar } from '../middlewares/middlewares';
+import { onlyPrivate, uploadAvatar, localsMiddleware } from '../middlewares/middlewares';
 
 const userRouter = express.Router();
 
