@@ -11,6 +11,7 @@
       margin-bottom: 25px;
     }
     .video__author {
+        float: left;
         a {
             color: #3498db;
         }
@@ -42,4 +43,10 @@
     }
     
   }
+}
+
+.video__author {
+    a {
+        color: #3498db;
+    }
 }
