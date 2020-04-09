@@ -68,7 +68,9 @@ export const videoDetail = async (req, res) => {
         params: { id },
     } = req;
     try {
-        const video = await (await Video.findById(id).populate('creator')).populate('comments');
+        const video = await (await Video.findById(id)
+        .populate('creator'))
+        .populate('comments');
         console.log(`finded Video: ${video}`);
         res.render('videoDetail', { pageTitle: `${video.title} | DDCtube`, video });
     } catch (error) {
@@ -154,20 +156,21 @@ export const postAddComment = async (req, res) => {
     const {
         params: { id },
         body: { comment },
-        user,
+        user
     } = req;
     
     try {
         const video = await Video.findById(id);
         const newComment = await Comment.create({
             text: comment,
-            creator: user.id,
+            creator: user.id
         });
-        video.comment.push(newComment._id);
+        console.log(comment);
+        video.comment.push(newComment.id);
         video.save();
     } catch (error) {
         res.status(400);
     } finally {
         res.end();
     }
-} 
+};
