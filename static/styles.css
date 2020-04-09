@@ -479,6 +479,8 @@ img {
     border-bottom-left-radius: 0px; }
     .video__comments-list li:not(:last-child) {
       margin-bottom: 15px; }
+  .video__comments-list #jsCommentDelBtn {
+    float: right; }
 
 .user-profile {
   width: 100%;
