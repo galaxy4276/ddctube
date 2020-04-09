@@ -11,7 +11,7 @@ const sendComment = async (comment) => {
         method: 'POST',
         data: {
             comment,
-        }
+        },
     });
     console.log(response);
 };
