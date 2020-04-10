@@ -1,0 +1,23 @@
+extends layouts/main.pug
+include mixins/videoBlock
+
+block content
+    .user-profile
+        .user-profile__header
+            img.u-avatar(src=loggedUser.avatarUrl)
+            h4.profile__username= loggedUser.name
+        if loggedUser && loggedUser.id === user.id
+            .user-profile__btns
+                a(href=`/users${routes.editProfile}`)
+                    button Edit Profile
+                a(href=`/users${routes.changePassword}`)
+                    button Change Password  
+        .uploaded-videos
+            .home_videos
+                each video in user.videos
+                    +videoBlock({
+                        id: video._id,
+                        title: video.title,
+                        views: video.views,
+                        videoFile: video.fileUrl,
+                    })

@@ -1,5 +1,4 @@
 /* eslint-disable indent */
-import '@babel/polyfill';
 
 import express from 'express';
 import logger from 'morgan';

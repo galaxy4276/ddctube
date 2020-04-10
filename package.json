@@ -4,15 +4,15 @@
   "description": "Cloning Youtube with vanila and NodeJS",
   "main": "index.js",
   "scripts": {
-	"dev:server": "nodemon --exec babel-node src/init.js --delay 2 --ignore '.scss' --ignore 'static' ",
-	"dev:assets": "cd src && cross-env WEBPACK_ENV=development webpack -w",
-	"build:assets": "cd src && cross-env WEBPACK_ENV=production webpack",
-	"build:server": "babel src --out-dir build",
-	"copyAll": "xcopy .\\src\\static .\\build\\static\\ /s /y && xcopy .\\src\\views .\\build\\views\\ /s /y",
-	"build": "npm run build:server && npm run build:assets && npm run copyAll",
-	"prebuild": "rd /s /q build",
-	"tunnel": "ngrok http 4000",
-	"start": "node build/init.js"
+    "dev:server": "nodemon --exec babel-node src/init.js --delay 2 --ignore '.scss' --ignore 'static' ",
+    "dev:assets": "cd src && cross-env WEBPACK_ENV=development webpack -w",
+    "build:assets": "cd src && cross-env WEBPACK_ENV=production webpack",
+    "build:server": "babel src --out-dir build",
+    "copyAll": "xcopy .\\src\\static .\\build\\static\\ /s /y && xcopy .\\src\\views .\\build\\views\\ /s /y",
+    "build": "npm run build:server && npm run build:assets && npm run copyAll",
+    "prebuild": "rd /s /q build",
+    "tunnel": "ngrok http 4000",
+    "start": "node build/init.js"
   },
   "author": "CHOIEUNGI",
   "license": "ISC",
@@ -63,6 +63,7 @@
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-vue": "^6.2.2",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0"
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "shx": "^0.3.2"
   }
 }

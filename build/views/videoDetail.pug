@@ -1,0 +1,39 @@
+extends layouts/main.pug
+include partials/videoPlayer
+
+block content
+    .video_detail_container
+        +videoPlayer({
+            src: video.fileUrl
+        })
+        .video_info
+            if loggedUser && video.creator.id === loggedUser.id
+                a(href=routes.editVideo(video._id)) 
+                    button Edit Video
+            h5.video_title= video.title
+            if video.views === 1
+                span.video_view 1 view
+            else 
+                span.video_view #{video.views} views
+            p.video_description= video.description
+        .video__author
+            |Uploaded by&nbsp;
+            a(href=routes.userDetail(video.creator.id))= video.creator.name
+        .video_comment
+            if video.comments.length === 1
+                span.video_comment-number
+                    span#jsCommentNumber 1
+                |comment
+            else
+                span.video_comment-number
+                    span#jsCommentNumber= video.comments.length
+                    |comments
+
+            form.add__comments#jsAddComment
+                input(type="text", placeholder="Add a Comment..", name="comment")
+            ul.video__comments-list#jsCommentList
+                each comment in video.comments.reverse()
+                    li
+                        span= comment.text
+                        span#jsCommentDelBtn
+                            i.fas.fa-window-close
