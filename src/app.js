@@ -1,4 +1,6 @@
 /* eslint-disable indent */
+import '@babel/polyfill';
+
 import express from 'express';
 import logger from 'morgan';
 import helmet from 'helmet';
@@ -35,7 +37,6 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger('dev'));
-app.use('/uploads', express.static('uploads')); // Node는 모든 경로에 대한 Router 가 필요하기때문에 express.static
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: true,
