@@ -480,7 +480,8 @@ img {
     .video__comments-list li:not(:last-child) {
       margin-bottom: 15px; }
   .video__comments-list #jsCommentDelBtn {
-    float: right; }
+    float: right;
+    cursor: pointer; }
 
 .user-profile {
   width: 100%;
