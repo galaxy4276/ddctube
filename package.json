@@ -1,6 +1,6 @@
 {
-    "name": "ddctube",
-    "version": "1.0.0",
+  "name": "ddctube",
+  "version": "1.0.0",
   "description": "Cloning Youtube with vanila and NodeJS",
   "main": "index.js",
   "scripts": {
@@ -13,10 +13,10 @@
     "tunnel": "lt --port 4000",
     "start": "PRODUCTION=true node build/init.js",
     "prestart": "npm run build"
-},
-"author": "CHOIEUNGI",
-"license": "ISC",
-"dependencies": {
+  },
+  "author": "CHOIEUNGI",
+  "license": "ISC",
+  "dependencies": {
     "rd": "^2.0.1",
     "@babel/core": "^7.8.7",
     "@babel/node": "^7.8.7",
@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/preset-env": "^7.8.7",  
+    "@babel/preset-env": "^7.8.7",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-html": "^6.0.0",
