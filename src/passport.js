@@ -14,13 +14,13 @@ passport.use(User.createStrategy());
 passport.use(new GithubStrategy({
     clientID: process.env.GITHUB_ID,
     clientSecret: process.env.GITHUB_SECRET,
-    callbackURL: `http://localhost:8001${routes.githubCallback}`,
+    callbackURL: `http://stark-lowlands-59343.herokuapp.com${routes.githubCallback}`,
 }, githubLoginCallback));
 
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_ID,
     clientSecret: process.env.FACEBOOK_SECRET,
-    callbackURL: `https://580ccbc4.ngrok.io${routes.facebookCallback}`, 
+    callbackURL: `https://stark-lowlands-59343.herokuapp.com${routes.facebookCallback}`, 
     profileFields: ['id', 'displayName', 'photos', 'email'],
     scope: ['public_profile', 'email'],
 }, facebookLoginCallback));
