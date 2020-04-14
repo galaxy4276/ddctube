@@ -14,7 +14,7 @@ passport.use(User.createStrategy());
 passport.use(new GithubStrategy({
     clientID: process.env.GITHUB_ID,
     clientSecret: process.env.GITHUB_SECRET,
-    callbackURL: `http://stark-lowlands-59343.herokuapp.com${routes.githubCallback}`,
+    callbackURL: `https://stark-lowlands-59343.herokuapp.com${routes.githubCallback}`,
 }, githubLoginCallback));
 
 passport.use(new FacebookStrategy({

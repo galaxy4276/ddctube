@@ -4,7 +4,7 @@ import Video from './models/Video';
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_DB, {
+mongoose.connect(process.env.PRODUCTION ? process.env.MONGO_DB : process.env.MONGO_DB {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
