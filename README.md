@@ -1,3 +1,6 @@
+# 정말 노베이스일 때 시작했던 문서입니다. 포트폴리오가 아닙니다!
+# node_modules이 올라와있네요..그땐 정말 아무것도 몰랐습니다.
+
 # DDCTUBE
 
 ### Nomad Coder에서 학습하여 제작중인 프로젝트 입니다.
@@ -13,7 +16,7 @@
 - 4.01 ~ 4.04 유저 인증 ( 페이스북, 깃헙, 카카오톡 로그인 추가 )
 - 4.05 자바스크립트 비디오 플레이어 제작 중
 - 4.06 비디오 플레이어 전체 구현 완료 / 녹화 기능 스킵
-- 4.07 
+- 4.07 ~ 
 
 ## Pages:
 - [x] Home
@@ -28,7 +31,7 @@
 - [x] Edit Video
 - [x] User Authentication ( passport )
 - [x] Video made by Javascript of Functionality.
-- [ ] API 
+- [x] API 
 
 
 ## Attributes
