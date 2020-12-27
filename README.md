@@ -1,5 +1,5 @@
 # DDCTUBE
-
+## 배포: https://stark-lowlands-59343.herokuapp.com/
 - 3.07 ~ 3.10 기본 Node.JS Setting, Pug Template Engine으로 기본적인 View 와 Routing 완료
 - 3.11 Join, Search 완료
 - 3.12 MongoDB - Mongoose Setting 완료, Video, Comment Schema Definition.
